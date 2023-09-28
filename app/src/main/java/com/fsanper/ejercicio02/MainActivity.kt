@@ -65,6 +65,27 @@ fun GreetingPreview() {
     }
 }
 
+fun MyComplexLayout(){
+
+}
+
+@Composable
+fun MyRow() {
+    Row(
+        modifier = Modifier
+            .fillMaxSize()
+            .horizontalScroll(rememberScrollState())
+    ) {
+        repeat(14) {
+            Text(
+                text = "Ejemplo 1",
+                modifier = Modifier
+                    .width(100.dp)
+            )
+        }
+    }
+}
+
 fun ColorAleatorio() {
     Modifier.background(Color(4))
 }
@@ -84,23 +105,6 @@ fun MyColumn() {
                     .background(Color.Red)
                     .fillMaxWidth()
                     .height(50.dp)
-            )
-        }
-    }
-}
-
-@Composable
-fun MyRow() {
-    Row(
-        modifier = Modifier
-            .fillMaxSize()
-            .horizontalScroll(rememberScrollState())
-    ) {
-        repeat(14) {
-            Text(
-                text = "Ejemplo 1",
-                modifier = Modifier
-                    .width(100.dp)
             )
         }
     }
